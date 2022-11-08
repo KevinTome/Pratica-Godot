@@ -2,7 +2,6 @@ extends Area2D
 
 
 func _on_items_body_entered(body):
-	print(body.name)
 	$anim.play("collected")
 
 

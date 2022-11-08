@@ -1069,9 +1069,6 @@ tile_data = PoolIntArray( -131073, 15, 0, -196608, 20, 0, -196607, 20, 0, -19660
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 80, 80 )
 
-[node name="Mushroom" parent="Player" instance=ExtResource( 11 )]
-position = Vector2( 176, 64 )
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1137,7 +1134,19 @@ shape = SubResource( 45 )
 [node name="apple" parent="." instance=ExtResource( 9 )]
 position = Vector2( 112, 128 )
 
+[node name="apple2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 128, 128 )
+
+[node name="apple3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 96, 128 )
+
 [node name="banana" parent="." instance=ExtResource( 10 )]
 position = Vector2( 240, 96 )
+
+[node name="banana2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 288, 64 )
+
+[node name="Mushroom" parent="." instance=ExtResource( 11 )]
+position = Vector2( 304, 64 )
 
 [connection signal="body_entered" from="fallzone" to="fallzone" method="_on_fallzone_body_entered"]

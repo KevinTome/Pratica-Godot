@@ -1200,8 +1200,21 @@ __meta__ = {
 position = Vector2( -8, 0 )
 shape = SubResource( 45 )
 
+[node name="fallzone2" type="Area2D" parent="."]
+position = Vector2( 1216, 320 )
+collision_layer = 8
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="fallzone2"]
+position = Vector2( -8, 0 )
+shape = SubResource( 45 )
+
 [node name="HUD" parent="." instance=ExtResource( 15 )]
 
 [connection signal="body_entered" from="fallzone" to="fallzone" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fallzone2" to="fallzone2" method="_on_fallzone_body_entered"]
 
 [editable path="HUD"]
